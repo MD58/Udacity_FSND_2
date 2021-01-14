@@ -29,7 +29,7 @@ npm start
 ## Configuring the API base URL
 
 The backend server (API base URL) needs to be defined in:
-[`./frontend/src/config.json`](./frontend/src/config.json)
+[`./frontend/src/config.json`](./src/config.json)
 
 The default value is:<br>
 
