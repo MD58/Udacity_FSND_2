@@ -121,4 +121,90 @@ The API will return four error types when requests fail:
     "success": true
 }
 ```
+- Option#2 - Request Parameters: 
+```json
+{
+    "searchTerm": "actor"
+}
+```
+- Option#2 - Response body: 
+```json
+{
+    "questions": [
+        {
+            "answer": "Tom Cruise",
+            "category": 5,
+            "difficulty": 4,
+            "id": 4,
+            "question": "What actor did author Anne Rice first denounce  then praise in the role of her beloved Lestat?"
+        }
+    ],
+    "searchTerm": "actor",
+    "success": true,
+    "total_questions": 1
+}
+```
+
+
+#### DELETE /questions/{question_id}
+- General
+  - Deletes the question of the given ID if it exists. Returns the id of the deleted question and success value
+- Sample ```http://127.0.0.1:5000/api/questions/4```: 
+```json
+{
+    "deleted": 4,
+    "success": true
+}
+```
+
+
+#### GET /categories/{category_id}/questions
+- General
+    - Returns a list of question object, current category, success value and total number of questions
+- Sample ```http://127.0.0.1:5000/api/categories/1/questions```: 
+```json
+{
+  "current_category": "Science", 
+  "questions": [
+    {
+      "answer": "The Liver", 
+      "category": 1, 
+      "difficulty": 4, 
+      "id": 20, 
+      "question": "What is the heaviest organ in the human body?"
+    }, 
+    {
+      "answer": "Alexander Fleming", 
+      "category": 1, 
+      "difficulty": 3, 
+      "id": 21, 
+      "question": "Who discovered penicillin?"
+    }, 
+    {
+      "answer": "Blood", 
+      "category": 1, 
+      "difficulty": 4, 
+      "id": 22, 
+      "question": "Hematology is a branch of medicine involving the study of what?"
+    }, 
+    {
+      "answer": "Test1", 
+      "category": 1, 
+      "difficulty": 1, 
+      "id": 25, 
+      "question": "Test1"
+    }, 
+    {
+      "answer": "Test1", 
+      "category": 1, 
+      "difficulty": 1, 
+      "id": 26, 
+      "question": "Test1"
+    }
+  ], 
+  "success": true, 
+  "total_questions": 5
+}
+```
+
 
