@@ -29,3 +29,5 @@ The API will return four error types when requests fail:
 
 ### Endpoints
 #### GET /categories
+- General
+  - Returns a list of cateogy object as key:value pairs, success value and the total number of categories
