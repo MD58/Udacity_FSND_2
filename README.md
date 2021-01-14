@@ -208,3 +208,40 @@ The API will return four error types when requests fail:
 ```
 
 
+#### POST /quizzes
+- General
+  - Return a random new question based on the provided cateogry & the previously returned questions
+- Sample ```http://127.0.0.1:5000/api/quizzes```: 
+- Request Parameters: 
+```json
+{
+    "previous_questions": [25, 26],
+    "quiz_category" : 1
+}
+```
+- Response body - first call: 
+```json
+{
+    "question": {
+        "answer": "Blood",
+        "category": 1,
+        "difficulty": 4,
+        "id": 22,
+        "question": "Hematology is a branch of medicine involving the study of what?"
+    },
+    "success": true
+}
+```
+- Response body - second call: 
+```json
+{
+    "question": {
+        "answer": "The Liver",
+        "category": 1,
+        "difficulty": 4,
+        "id": 20,
+        "question": "What is the heaviest organ in the human body?"
+    },
+    "success": true
+}
+```
