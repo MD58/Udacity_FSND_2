@@ -59,6 +59,7 @@ The default value is:
 ```bash
   self.database_name = "trivia_test"
   self.database_path = "postgres://{}{}/{}".format('postgres:123456@','localhost:5432', self.database_name)
+```
 
 ##### Run the tests
 ```
