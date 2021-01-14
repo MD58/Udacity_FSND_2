@@ -31,7 +31,28 @@ The API will return four error types when requests fail:
 #### GET /categories
 - General
   - Returns a list of cateogy object as key:value pairs, success value and the total number of categories
-- Sample: 
+- Sample ```http://127.0.0.1:5000/api/categories```: 
+```json
+{
+  "categories": {
+    "1": "Science", 
+    "2": "Art", 
+    "3": "Geography", 
+    "4": "History", 
+    "5": "Entertainment", 
+    "6": "Sports"
+  }, 
+  "success": true, 
+  "total_categories": 6
+}
+```
+
+#### GET /questions
+- General
+  - Returns a list of question object, all available categories, current category, success value and total number of questions
+  - Results are paginated in groups of 10. Include a request arugment to chose page number, starting from 1
+  - optional: include categoryId request arugment to get the questions of that specific category
+- Sample ```http://127.0.0.1:5000/api/questions?page=1&categoryId=1```: 
 ```json
 {
   "categories": {
