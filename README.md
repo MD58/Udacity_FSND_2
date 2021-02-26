@@ -1,6 +1,6 @@
 ## README
 
-Kindly check the readme files for installation / set up details:
+Set up details:
 
 1. [`./frontend/`](./frontend/README.md)
 2. [`./backend/`](./backend/README.md)
